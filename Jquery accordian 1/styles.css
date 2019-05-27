@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  border: 0;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.2em;
+  font-size: 2em;
+}
+
+ul {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
