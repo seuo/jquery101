@@ -1,0 +1,77 @@
+body{
+	
+}
+header{
+	height: 100vh;
+	position: fixed;
+	width: 20em;
+	background-color: rgba(255,0,0,1);
+	top: 0;
+	left: -17em;
+	transition: all cubic-bezier(.68,.25,.88,.31) 1s;
+}
+
+
+
+header.open{
+	left: 0em;
+	background-color: rgb(37, 42, 50);
+
+}
+main{
+
+	min-height: 100vh; 
+
+}
+
+#slide-button{
+	font-size: 2em;
+	float: right;
+	width: 1em;
+	color: white;
+	cursor: pointer;
+}
+
+.fa-arrow-circle-right {
+	transition: ease-in-out 1s;
+}
+
+.fa-arrow-circle-left {
+	transition: ease-in-out 1s;
+}
+
+.fa-chevron-circle-down {
+	transition: ease-in-out 1s;
+	color:#333;
+}
+
+.fa-chevron-circle-up {
+	transition: ease-in-out 1s;
+}
+
+main ul{
+
+	margin-left:5em;
+	list-style-type: none;
+	padding: 0  
+
+}
+main>ul>li>h2>i{
+
+	margin-right: 0.5em;
+	color: rgba(255,0,0,1); 
+
+}
+
+#accordion p{
+	transition:all ease-out 1s;
+	height:0em;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#accordion p.open{
+	height:5em;
+	opacity: 1;
+
+}
