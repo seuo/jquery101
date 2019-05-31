@@ -86,6 +86,7 @@
 .elementAnim {
     animation:anim1 2s;
     transition:all ease;
+    transform:translateX(-500%);
 }
 
 .contactForm .message{
@@ -150,6 +151,7 @@ h1{
     position: relative;
     width:80%;
     margin:auto;
+    overflow:hidden;
 }
 
 .heading-wrap:before {
@@ -164,13 +166,28 @@ h1{
     background-image:linear-gradient(orange 0,orange 0.5em,transparent 0.5em),
                      linear-gradient(to top, orange 0,orange 0.5em,transparent 0.5em),
                      linear-gradient(90deg, orange 0,orange 0.5em,transparent 0.5em);
+
+
 }
 
 .heading-wrap.grow:before{
     height:100%;
+    z-index: 1;
 }
 
 
-.element-anim {
-    transition:all ease 2s;
+.invisible {
+    opacity: 0;
 }
+/* .heading-wrap h1 {
+    transform:translateX(-100%);
+    transition:all ease 1.5s;
+}
+
+.heading-wrap.grow h1 {
+    transform:translateX(0%);
+} */
+
+
+
+

@@ -54,6 +54,81 @@ $(function(){
 
     });
 
+
+    $('h1.animated').addClass('invisible');
+
+    $(document).on('scroll',function(){
+        var scrollTop = $(document).scrollTop();
+        // each is a "loop" through
+        $('h1.animated').each(function(i,el){
+            var headingOffset = $(el).offset().top;
+
+
+            console.log(i,el)
+            if (scrollTop>headingOffset-500){
+                $(el).parent().addClass('grow');
+
+                if ($(el).hasClass('invisible') == true){
+                    $(el).removeClass('invisible')
+                    .addClass('fadeInLeft');
+
+                 $(el).one('animationend',function(){ 
+                     $(this).removeClass('fadeInLeft');
+                });
+            }
+        
+        }
+
+        if (scrollTop>headingOffset-500){
+            $(el).parent().addClass('grow');
+
+            if ($(el).hasClass('invisible') == true){
+                $(el).removeClass('invisible')
+                .addClass('fadeInLeft');
+
+             $(el).one('animationend',function(){ 
+                 $(this).removeClass('fadeInLeft');
+            });
+        }
+    
+    }
+        
+            else{
+                $(el).parent().removeClass('grow');
+
+                
+                if ($(el).hasClass('invisible')==false) {
+
+                    $(el).addClass('fadeOutRight');
+
+                    $(el).one('animationend',function(){
+                        $(this).removeClass('fadeOutRight')
+                                .addClass('invisible');
+                    });
+
+                }
+            }
+            
+        });
+
+    });
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
     //keyframe animation
 
     // $(document).on('scroll',function(){
@@ -69,21 +144,3 @@ $(function(){
     //     });
 
     // });
-
-    $(document).on('scroll',function(){
-        var scrollTop = $(document).scrollTop();
-        // each is a "loop" through
-        $('h1.animated').each(function(i,el){
-            var headingOffset = $(el).offset().top;
-            console.log(i,el)
-            if (scrollTop>headingOffset-500){
-                $(el).parent().addClass('grow');
-            }else{
-                $(el).parent().removeClass('grow');
-            }
-        });
-
-    });
-
-
-});
