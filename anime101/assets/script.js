@@ -59,7 +59,7 @@ $(function(){
     $(document).on('scroll',function(){
         var scrollTop = $(document).scrollTop();
 
-        var progress = ((scrollTop-1000)/500)+1;
+        var progress = ((scrollTop-s2+500)/500);
 
         tl.seek(tl.duration * progress);
 
