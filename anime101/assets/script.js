@@ -1,5 +1,17 @@
 $(function(){
 
+    anime({
+        targets: '.section1 .cls-1',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true,
+      });
+
+      
+
     // var anime1 = anime({
     //     targets:'.section2 label',
     //     translateX: ['-50vw',0],
@@ -59,7 +71,10 @@ $(function(){
     $(document).on('scroll',function(){
         var scrollTop = $(document).scrollTop();
 
-        var progress = ((scrollTop-s2+500)/500);
+        var progress = ((scrollTop-s2+300)/500);
+                        
+                        // s2:reference point // 300:earlier or later.. how far into section to before starting // )/500:animation time
+                        // scrollTop - s2 (0 from top of section 2) +500 (how far into section 2) /500 ( timeline of animation 500px)
 
         tl.seek(tl.duration * progress);
 

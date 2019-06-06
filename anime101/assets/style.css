@@ -21,6 +21,11 @@ label,input{
 	transition:all ease 0.2s;
 }
 
+.cls-1 {
+	/* position: absolute; */
+	transform:scale(.3);
+}
+
 
 
 
