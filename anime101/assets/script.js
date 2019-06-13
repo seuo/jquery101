@@ -71,7 +71,7 @@ $(function(){
     $(document).on('scroll',function(){
         var scrollTop = $(document).scrollTop();
 
-        var progress = ((scrollTop-s2+300)/500);
+        var progress = ((scrollTop-s2+1000)/500);
                         
                         // s2:reference point // 300:earlier or later.. how far into section to before starting // )/500:animation time
                         // scrollTop - s2 (0 from top of section 2) +500 (how far into section 2) /500 ( timeline of animation 500px)
